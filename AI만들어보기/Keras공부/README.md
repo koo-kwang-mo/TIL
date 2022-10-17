@@ -7,11 +7,12 @@
 <img src='Dense Layer.JPG'>
 
 다층 퍼셉트론 신경망에서 사용되는 레이어이며 입력과 출력은 모두 연결 되어 있다.
- => 총 연견선은 입력 X 출력이 된다.
+ => 총 연견선의 개수는 입력 X 출력이 된다.
  각 연결선은 가중치를 가지고 있으며 이 가중치는 연결강도를 의미한다.
 
  from tensorflow.python.keras.layers import Dense
 Dense(8,input_dim=4,activation='relu')
+
  - 첫 번째 인자는 출력 뉴런의 수 이며
  - input_dim 은 입력 뉴런의 수를 의미한다.
  - activation은 활성화 함수로 4가지 값이 존재한다.
@@ -20,17 +21,18 @@ Dense(8,input_dim=4,activation='relu')
    - sigmoid : 시그모이드 함수로 이진 분류 문제에서 출력 층에 주로 쓰임
    - softmax : 다중 클래스 분류 문제의 출력 층에 주로 쓰임.
 
+
 ### Convolution Layer
 
 <img src='Convolution Layer.JPG'>
 
 Convolution Layer 신경망은 다층 퍼셉트로 신경망과 유사하나 이미지가 가지고 있는 특성을 고려하여 설게뙴
  => 영상 처리에 주로 사용됨.
- Convolution Layer의 신경망 모델의 주요 레이어로
+ Convolution Layer의 신경망 모델의 주요 레이어로 3가지가 있다.
   - Convolution Layer
   - Max pooling Layer
-  - Flatten Layer가 있다.
-많은 종류가 있지만 케라스에서 자주 사용되는 Conv2D Layer를 살펴보자.
+  - Flatten Layer
+ 많은 종류가 있지만 케라스에서 자주 사용되는 Conv2D Layer를 살펴보자.
 
 from tensorflow.python.keras.layers.convolutional import Conv2D
 Conv2D(32,(5,5), padding='valid',input_shape=(28,28,1),activation='relu')
@@ -78,6 +80,8 @@ Flatten()
 
 Conv2D Layer -> MaxPooling2D Layer -> Conv2D Layer -> MaxPooling2D Layer -> Flatten Layer -> Dense Layer
 로 이뤄진 모델을 만드는 코드를 살펴보자.
+
+
 import numpy
 from tensorflow.python.keras.models import Sequential
 from tensorflow.python.keras.layers import Dense
@@ -98,6 +102,7 @@ model.add(Dense(3,activation='softmax'))
 
 
 +) 가시화하는 코드
+
 from IPython.display import SVG
 from tensorflow.python.keras.utils.vis_utils import model_to_dot
 
