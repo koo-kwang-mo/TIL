@@ -1,4 +1,4 @@
-# 1. Model 생성하기
+# 1. Model 생성하기(순차 모델)
    1. 일반적으로 모델을 생성하고 type을 찍어보면 keras 자체 엔진에서 제공하는 sequential class를 통해 생성됨을 알 수 있다.
    2. add 함수를 사용해서 model에 node를 추가할 수 있다.
       - 이미 model 내부에 있는 node들과 현재 추가하는 node를 연결할 수 있다.  
@@ -44,6 +44,8 @@
       - batch_size
    
     ## y_predict = model.predict(x_test, batch_size = 2)
+
+
 
 출처 : https://hyuna-tech.tistory.com/entry/Keras-Sequential-Model-%EC%88%9C%EC%B0%A8%EB%AA%A8%EB%8D%B8-%EC%82%AC%EC%9A%A9-%EC%98%88%EC%A0%9C-%EB%8B%A8%EC%9D%BC-layer
       
