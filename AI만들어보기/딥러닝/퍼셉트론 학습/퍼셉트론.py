@@ -19,7 +19,7 @@ print("predict (before traning)", w)
 for epoch in range(50):
   for x_val, y_val in zip(X, Y):
     update = 0.01 * (y_val - predict(x_val))
-    w[1:] += update * x_val
+    w[1:] += update * x_val#시그마 wi*xi를 표현
     w[0] += update
 
 print("predict (after traning)", w)
