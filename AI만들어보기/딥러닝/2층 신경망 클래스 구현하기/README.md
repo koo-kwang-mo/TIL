@@ -35,7 +35,7 @@ CEE - MSE 결론)
  CEE는 원 - 핫 코딩으로 각 클래스에 속할 확률을 엔트로피 개념으로 설명한 것으로
  학습기준에 따라 적절히 이용할 것!
 
-
++) 필기
 <img src = '필기1.png'>
 
 출처 : https://wiserloner.tistory.com/1083
