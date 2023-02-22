@@ -6,3 +6,4 @@
 
 3) #c.NotebookApp.notebook_dir = ''을 찾아서 ''사이에 원하는 기본경로를 입력한 후 #을 지우고 저장한다.
 
+출처 : https://rasino.tistory.com/289
